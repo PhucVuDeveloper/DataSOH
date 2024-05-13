@@ -2,7 +2,7 @@
 include "connect.php";
 $id = $_POST['iddonhang'];
 
-$query = 'DELETE FROM `donhang` WHERE `id` = ' . $id;
+$query = 'DELETE FROM `dondatban` WHERE `id` = ' . $id;
 $data = mysqli_query($conn, $query);
 
 if ($data == true) {

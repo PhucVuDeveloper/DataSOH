@@ -1,9 +1,9 @@
 <?php
 include "connect.php";
 $token = $_POST['token'];
-$iddonhang = $_POST['id'];
+$idDon = $_POST['idDon'];
 // check data email 
-$query =  'UPDATE `donhang` SET `zalo`= "'.$token.'" WHERE `id` =' . $iddonhang . '';
+$query =  'UPDATE `dondatban` SET `zalo`= "'.$token.'" WHERE `idDon` =' . $idDon . '';
 $data = mysqli_query($conn, $query);
 if ($data == true) {
        $arr = [
