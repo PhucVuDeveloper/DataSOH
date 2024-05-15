@@ -7,7 +7,7 @@ if(empty($search)){
 		'message' => "khong thanh cong"
 	];
 }else{
-    $query = "SELECT * FROM `sanphammoi` WHERE `tensp` LIKE '%".$search."%'";
+    $query = "SELECT * FROM `product` WHERE `ProductName` LIKE '%".$search."%'";
 $data = mysqli_query($conn, $query);
 $result = array();
 while ($row = mysqli_fetch_assoc($data)) {

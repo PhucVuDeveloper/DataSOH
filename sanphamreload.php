@@ -1,8 +1,8 @@
 <?php
 include "connect.php";
 $total = 7;
-$loai = $_POST['loai'];
-$query = 'SELECT * FROM `sanphammoi` WHERE `loai` = ' . $loai . ' LIMIT ' . $total . '';
+$ProductType = $_POST['ProductType'];
+$query = 'SELECT * FROM `product` WHERE `ProductType` = ' . $ProductType . ' LIMIT ' . $total . '';
 $data = mysqli_query($conn, $query);
 $result = array();
 while ($row = mysqli_fetch_assoc($data)) {

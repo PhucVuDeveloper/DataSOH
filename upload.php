@@ -7,12 +7,12 @@ $result = array();
 while ($row = mysqli_fetch_assoc($data)) {
        $result[] = ($row);
 }
-if ($result[0]['idproduct'] == null) {
+if ($result[0]['idProduct'] == null) {
        $name = 1;
 } else {
        $name = ++$result[0]['idProduct'];
 }
-$name  = time() . '_' . $result[0]['idproduct'] . '.jpg';
+$name  = time() . '_' . $result[0]['idProduct'] . '.jpg';
 $target_file_name = $target_dir . $name;
 
 if (isset($_FILES["file"])) {

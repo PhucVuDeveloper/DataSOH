@@ -1,8 +1,8 @@
 <?php
 include "connect.php";
-$status = $_POST['status'];
+$Status = $_POST['Status'];
 if ($status == 1) {
-	$query = "SELECT * FROM `user` WHERE `status` = " . $status;
+	$query = "SELECT * FROM `user` WHERE `Status` = " . $Status;
 	$data = mysqli_query($conn, $query);
 	$result = array();
 	while ($row = mysqli_fetch_assoc($data)) {
@@ -24,8 +24,8 @@ if ($status == 1) {
 	}
 } else if ($status == 0) {
 
-	$iduser = $_POST['iduser'];
-	$query = "SELECT * FROM `user` WHERE `id` = " . $iduser . " AND `status` =" . $status;
+	$idUser = $_POST['idUser'];
+	$query = "SELECT * FROM `user` WHERE `idUser` = " . $idUser . " AND `Status` =" . $Status;
 	$data = mysqli_query($conn, $query);
 	$result = array();
 	while ($row = mysqli_fetch_assoc($data)) {
